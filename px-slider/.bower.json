@@ -1,6 +1,6 @@
 {
   "name": "px-slider",
-  "version": "0.2.4",
+  "version": "0.4.0",
   "main": [
     "px-slider.html"
   ],
@@ -14,8 +14,9 @@
     "test"
   ],
   "dependencies": {
-    "polymer": "~v1.2.3",
-    "px-theme": "https://github.com/PredixDev/px-theme.git#~0.4.0"
+    "polymer": "~v1.4.0",
+    "px-theme": "https://github.com/PredixDev/px-theme.git#~0.7.0",
+    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#~v1.0.3"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#~v1.1.0",
@@ -24,11 +25,11 @@
     "px-helpers-design": "https://github.com/PredixDev/px-helpers-design.git#~0.3.2"
   },
   "homepage": "https://github.com/PredixDev/px-slider",
-  "_release": "0.2.4",
+  "_release": "0.4.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.2.4",
-    "commit": "63f4814aeb55bbb612defe1a0820efba8f01603b"
+    "tag": "v0.4.0",
+    "commit": "f2659e8b499e4e12e17069049ad47c73f62f8fbd"
   },
   "_source": "https://github.com/PredixDev/px-slider.git",
   "_target": "*",

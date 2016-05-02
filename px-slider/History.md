@@ -1,3 +1,19 @@
+v0.4.0
+=================
+* Upgrade to Polymer 1.4.0
+
+v0.3.2
+=================
+* updated README and put a link to full API on the GH-pages.
+
+v0.3.1
+=================
+* edited readme
+
+v0.3.0
+=================
+* implemented the iron-resizable-behavior behavior
+
 v0.2.4
 ==================
 * Updated License
