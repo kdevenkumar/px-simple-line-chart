@@ -1,16 +1,16 @@
-v0.7.1
-=================
+v1.3.2
+==================
 * added oss_notice to bower ignore
 
-v0.7.0
-=================
-* migrate to polymer 1.4.0
-
-v0.6.8
+v1.3.1
 ==================
-* updated README.
+* updated Documentation in code.
 
-v0.6.4
+v1.3.0
+==================
+* Upgrade to Polymer 1.4.0
+
+v1.2.3
 ==================
 * Updated License
 
