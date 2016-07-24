@@ -1,13 +1,217 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>px-simple-line-chart API</title>
-        <script src="../webcomponentsjs/webcomponents-lite.min.js"></script>
-        <link rel="import" href="../iron-component-page/iron-component-page.html"/>
-    </head>
-    <body>
-        <iron-component-page src="px-simple-line-chart.html" active="px-simple-line-chart"></iron-component-page>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>px-simple-horizontal-line-chart Demo</title>
+  <link rel="stylesheet" type="text/css" href="css/px-simple-line-chart-demo.css" />
+  <!-- Import custom element. Note: see comment about relative paths to dependencies in the *.html file referenced below -->
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../px-theme/px-theme.html" />
+  <link rel="import" href="../iron-ajax/iron-ajax.html" />
+  <link rel="import" href="../px-api-viewer/px-api-viewer.html" />
+  <link rel="import" href="../px-tabs/px-tab-set.html" />
+  <link rel="import" href="../px-dropdown/px-dropdown.html" />
+  <link rel="import" href="px-simple-line-chart.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel="import" href="../px-demo-snippet/px-demo-snippet.html">
+  <link rel="import" href="../polymer-font-awesome/polymer-font-awesome.html">
+  <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
+<style>
+  .chart__demo{
+
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Wrap elements with auto-binding template to -->
+  <!-- allow use of Polymer bindings in main document -->
+  <template id="just-for-demo" is="dom-bind">
+    <iron-ajax
+        auto
+        url="demo-data/sample-data.json"
+        handleAs="json"
+        last-response="{{sampleData}}">
+    </iron-ajax>
+    <!-- discription -->
+    <div class="hero u-p++ text--shadow">
+      <h1 class="delta">px-simple-line-chart</h1>
+      <p class="description-text">
+        The Simple Line Chart provides a quick way to visualize linear data. Configuration options include
+        setting the minimum and maximum values for the Y-axis, whether or not to include a orange horizontal line
+        at a certain threshold value, setting the number of vertical and horizontal grid marks; and customizing
+        the labels of the min, max, and threshold.
+      </p>
+      <div class="flex">
+        <img class="u-mr-- " src="https://img.shields.io/travis/PredixDev/px-simple-line-chart.svg?style=flat-square" alt="Travis"  onerror="this.style.display='none'"/>
+        <img class="u-mr--" src="https://img.shields.io/bower/v/px-simple-line-chart.svg?style=flat-square" alt="Bower" onerror="this.style.display='none'" />
+        <img class="u-mr--" src="https://img.shields.io/github/issues-raw/PredixDev/px-simple-line-chart.svg?style=flat-square" alt="Issues" onerror="this.style.display='none'" />
+        <img class="u-mr--" src="https://img.shields.io/github/watchers/PredixDev/px-simple-line-chart.svg?style=social&label=Watch" onerror="this.style.display='none'" />
+      </div>
+    </div>
+    <br />
+
+    <!-- mega demo -->
+    <div style="position: relative;" class="u-pb++ flex flex--col" id="defaultTab">
+      <div class="tabContainer u-pt++ u-pl++">
+        <px-tab-set selected="{{selected}}" bare no-bottom-border>
+          <template is="dom-repeat" items="{{optionsArray}}">
+            <px-tab>Configuration {{indexPlusOne(index)}}</px-tab>
+          </template>
+        </px-tab-set>
+      </div>
+      <px-tab-pages selected="{{selected}}">
+        <template is="dom-repeat" items="{{optionsArray}}">
+          <section class="tab-page flex flex--right flex--wrap">
+            <div class="mega-demo flex u-pb++">
+              <!-- Properties -->
+              <div class="properties u-ph+ u-pb+ u-mt++ u-mh++">
+                <p class="epsilon">Properties</p>
+                <div class="u-mb-">Width:
+                  <input id="width{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="{{item.width}}" value="{{item.width::input}}" />
+                </div>
+                <div class="u-mb-">Height:
+                  <input id="height{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="{{item.height}}" value="{{item.height::input}}" />
+                </div>
+                <div class="u-mb-">Columns:
+                  <input id="columns{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="{{item.columns}}" value="{{item.columns::input}}" />
+                </div>
+                <div class="u-mb-">Rows:
+                  <input id="rows{{indexPlusOne(index)}}" class="text-input" type="number" placeholder="{{item.rows}}" value="{{item.rows::input}}" />
+                </div>
+
+              <!-- end properties -->
+              </div>
+
+              <div class="demoContainer u-mr++">
+                <!-- demo -->
+                <div class="flex flex--col">
+                  <div class="flex__item demo u-ph+ u-pb+ u-mt++">
+                    <div class="u-mt+">
+                      <px-simple-line-chart
+                        width="{{item.width}}"
+                        height="{{item.height}}"
+                        min="{{item.min}}"
+                        max="{{item.max}}"
+                        columns="{{item.columns}}"
+                        rows="{{item.rows}}"
+                        line-data="{{sampleData.series}}"
+                        threshold="{{item.threshold}}"
+                        min-label="{{item.minLabel}}"
+                        max-label="{{item.maxLabel}}"
+                        threshold-label="{{item.thresholdLabel}}"
+                        >
+                        </px-simple-line-chart>
+                    </div>
+                  </div>
+                  <div class="flex__item">
+                  <px-demo-snippet
+                    element-properties={{item}}
+                    element-name="px-datetime-range-field">
+                  </px-demo-snippet>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="apiContainer">
+            <div class="flex flex--col api u-mt++" >
+              <div>
+                <px-api-viewer source="px-simple-line-chart"></px-api-viewer>
+              </div>
+            </div>
+          </div>
+        </section>
+      </template>
+    </px-tab-pages>
+    </div>
+    <footer class="footer flex flex--center">
+    <div class="footer__container u-pv++">
+      <div>
+        <a href="https://ge.com/digital" >
+          <img src="monogram-wdmk.png" alt="GE Monogram" class="footer__img">
+        </a>
+      </div>
+      <div class="footer__list">
+        <ul class="list-inline list-inline--delimited">
+          <li>
+            <a href="http://predix.io/legal" class="footer__list--lnk">Legal</a>
+          </li>
+          <li>
+            <a href="mailto:info@predix.io" class="footer__list--lnk">Contact Us</a>
+          </li>
+          <li>Copyright &copy; {{year}} General Electric Company. All rights reserved.</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </template>
+  <script>
+    window.addEventListener('WebComponentsReady', function() {
+
+      var template = document.querySelector('template[is=dom-bind]'),
+          year = new Date(),
+          lineData="{{sampleData.series}}",
+          width=["350","auto"],
+          height=["250","100px"],
+          min=["","0.5"],
+          max=["","3.0"],
+          columns=["8","5"],
+          rows=["5","3"],
+          threshold=["","1.8"],
+          minLabel=["","min"],
+          maxLabel=["","max"],
+          thresholdLabel=["",""];
+
+          optionsArray = [
+            {
+              "width":width[1],
+              "min":min[1],
+              "max":max[1],
+              "columns":columns[1],
+              "rows":rows[1],
+              "lineData":lineData,
+              "threshold":threshold[1],
+              "minLabel":minLabel[1],
+              "maxLabel":maxLabel[1],
+              "thresholdLabel":thresholdLabel[1]
+            },
+            {
+              "width":width[0],
+              "height":height[0],
+              "min":min[0],
+              "max":max[0],
+              "columns":columns[0],
+              "rows":rows[0],
+              "lineData":lineData,
+              "threshold":threshold[0],
+              "minLabel":minLabel[0],
+              "maxLabel":maxLabel[0],
+              "thresholdLabel":thresholdLabel[0]
+            },
+            {
+              "lineData":lineData
+            }
+          ];
+          indexPlusOne = function(num) {
+            return num + 1;
+          },
+          onlyOneConfigItem = function() {
+            return (optionsArray.length === 1);
+          };
+
+          year = year.getFullYear();
+
+          template.selected = "0";
+          template.optionsArray = optionsArray;
+          template.indexPlusOne = indexPlusOne;
+          template.year = year;
+    });
+  </script>
+
+</body>
+
 </html>

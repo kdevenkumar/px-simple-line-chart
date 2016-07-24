@@ -1,6 +1,6 @@
 {
   "name": "px",
-  "version": "1.2.2",
+  "version": "1.4.2",
   "authors": [
     "predix experience developers"
   ],
@@ -17,7 +17,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "test-target"
+    "test-target",
+    "OSS_Notice.pdf"
   ],
   "devDependencies": {
     "es6-promise": "https://github.com/jakearchibald/es6-promise.git",
@@ -27,13 +28,13 @@
   },
   "license": "GE",
   "homepage": "predix.io",
-  "_release": "1.2.2",
+  "_release": "1.4.2",
   "_resolution": {
     "type": "version",
-    "tag": "v1.2.2",
-    "commit": "12962b2f0ead4bbd0768978ccba91de7c82f3819"
+    "tag": "v1.4.2",
+    "commit": "8ff9b8007d8ead4b93361f3f7e70f7ea65a7042f"
   },
   "_source": "https://github.com/PredixDev/px.git",
-  "_target": "1.2.2",
+  "_target": "1.4.2",
   "_originalSource": "https://github.com/PredixDev/px.git"
 }

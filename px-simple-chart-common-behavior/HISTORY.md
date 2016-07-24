@@ -1,3 +1,11 @@
+v1.4.2
+==================
+* Remove unneeded dependency.
+
+v1.4.1
+==================
+* Upgrade latest px
+
 v1.4.0
 ==================
 * Upgrade to Polymer 1.5.0
