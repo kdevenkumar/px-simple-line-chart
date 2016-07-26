@@ -45,8 +45,5 @@
     "px-actionable-text-icons-design": "^0.0.3",
     "px-code-design": "~0.2.11",
     "px-dropdown": "^0.10.2"
-  },
-  "resolutions": {
-    "px": "1.4.2"
   }
 }
