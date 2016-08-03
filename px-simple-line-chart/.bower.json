@@ -1,6 +1,6 @@
 {
   "name": "px-simple-line-chart",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "main": [
     "px-simple-line-chart.html"
   ],
@@ -47,11 +47,11 @@
     "px-polymer-font-awesome": "^0.1.8"
   },
   "homepage": "https://github.com/PredixDev/px-simple-line-chart",
-  "_release": "1.4.3",
+  "_release": "1.4.4",
   "_resolution": {
     "type": "version",
-    "tag": "v1.4.3",
-    "commit": "0f9e8a414f4ae3e19f3dba9dda867dc0e2d3dd8f"
+    "tag": "v1.4.4",
+    "commit": "91f9b6770e777448640c255ad361a0d858d03b1a"
   },
   "_source": "https://github.com/PredixDev/px-simple-line-chart.git",
   "_target": "^1.4.0",
