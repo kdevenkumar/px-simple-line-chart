@@ -1,6 +1,6 @@
 {
   "name": "px-simple-line-chart",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "main": [
     "px-simple-line-chart.html"
   ],
@@ -12,8 +12,7 @@
     "bower_components",
     "node_modules",
     "test",
-    "OSS_Notice.pdf",
-    "px-simple-line-chart.png"
+    "OSS_Notice.pdf"
   ],
   "keywords": [
     "web-components"
@@ -22,7 +21,7 @@
     "polymer": "^v1.5.0",
     "px-theme": "~0.8.0",
     "d3": "~3.5.6",
-    "px-simple-chart-common-behavior": "~1.4.0",
+    "px-simple-chart-common-behavior": "~1.4.2",
     "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
     "underscore": "~1.8.3"
   },
@@ -37,7 +36,7 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#~1.2.3",
     "px-tabs": "~0.4.0",
     "px-api-viewer": "^0.0.1",
-    "px-demo-snippet": "^0.0.8",
+    "px-demo-snippet": "^0.1.0",
     "px-list-inline-design": "^0.2.11",
     "px-toggle-design": "^0.2.12",
     "px-headings-design": "^0.2.14",
@@ -47,11 +46,11 @@
     "px-polymer-font-awesome": "^0.1.8"
   },
   "homepage": "https://github.com/PredixDev/px-simple-line-chart",
-  "_release": "1.4.4",
+  "_release": "1.4.5",
   "_resolution": {
     "type": "version",
-    "tag": "v1.4.4",
-    "commit": "91f9b6770e777448640c255ad361a0d858d03b1a"
+    "tag": "v1.4.5",
+    "commit": "eccd115c209fce2db6e5ba23a38c17692c82cb33"
   },
   "_source": "https://github.com/PredixDev/px-simple-line-chart.git",
   "_target": "^1.4.0",

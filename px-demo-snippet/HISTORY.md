@@ -1,3 +1,27 @@
+v0.1.2
+=================
+* changing px-clipboard in bower
+
+v0.1.1
+=================
+* added flex grow to editor class
+
+v0.1.0
+=================
+* added light dom content support
+
+v0.0.11
+=================
+* changed polymer to 1.5.0
+
+v0.0.10
+=================
+* added travis
+
+v0.0.9
+=================
+* changed bower file to match px-theme bower designation
+
 v0.0.8
 =================
 * added checker for object - if value is object, wrap it in single quotes, otherwise, double quotes. also, added html mode back into editor
