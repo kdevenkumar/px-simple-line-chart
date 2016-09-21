@@ -1,6 +1,6 @@
 {
   "name": "px-simple-chart-common-behavior",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "main": [
     "px-simple-chart-common-behavior.html"
   ],
@@ -16,15 +16,15 @@
   ],
   "dependencies": {
     "polymer": "^1.6.1",
-    "px": "https://github.com/PredixDev/px.git#1.4.2"
+    "px": "~1.4.3"
   },
   "devDependencies": {},
   "homepage": "https://github.com/predixDev/px-simple-chart-common-behavior",
-  "_release": "1.5.0",
+  "_release": "1.5.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.5.0",
-    "commit": "cddcafe7055fd8dec0c608b9859dbc1487912fc7"
+    "tag": "v1.5.1",
+    "commit": "ab288abd23a915d9ecbaf749a12423fede4a286e"
   },
   "_source": "https://github.com/predixDev/px-simple-chart-common-behavior.git",
   "_target": "~1.5.0",

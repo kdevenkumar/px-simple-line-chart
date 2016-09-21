@@ -46,12 +46,10 @@
     "px-polymer-font-awesome": "^0.1.9"
   },
   "resolutions": {
-    "iron-ajax": "^1.4.3",
-    "px-theme": "^1.1.2",
-    "px-viewport-design": "~0.4.1",
-    "px-typography-design": "^1.1.0",
+    "px": "~1.4.3",
+    "iron-ajax": "^1.0.0",
     "px-simple-chart-common-behavior": "~1.5.0",
-    "px-clipboard": "^0.1.1",
-    "px-tooltip": "~0.8.0"
+    "px-theme": "~1.1.2",
+    "px-typography-design": "~1.1.1"
   }
 }

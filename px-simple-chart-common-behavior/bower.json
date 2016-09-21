@@ -1,6 +1,6 @@
 {
   "name": "px-simple-chart-common-behavior",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "main": [
     "px-simple-chart-common-behavior.html"
   ],
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "polymer": "^1.6.1",
-    "px": "https://github.com/PredixDev/px.git#1.4.2"
+    "px": "~1.4.3"
   },
   "devDependencies": {
   }
