@@ -1,6 +1,6 @@
 {
   "name": "px-simple-line-chart",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "main": [
     "px-simple-line-chart.html"
   ],
@@ -40,17 +40,17 @@
     "px-list-inline-design": "^0.2.11",
     "px-toggle-design": "^0.2.12",
     "px-headings-design": "^0.2.14",
-    "px-actionable-text-icons-design": "^0.0.3",
+    "px-actionable-text-icons-design": "^0.1.0",
     "px-code-design": "~0.2.11",
     "px-dropdown": "^0.12.1",
     "px-polymer-font-awesome": "^0.1.9"
   },
   "homepage": "https://github.com/PredixDev/px-simple-line-chart",
-  "_release": "1.5.1",
+  "_release": "1.5.2",
   "_resolution": {
     "type": "version",
-    "tag": "v1.5.1",
-    "commit": "5768e8a932e66452cc93c16817de3603b661fff1"
+    "tag": "v1.5.2",
+    "commit": "5bf4df1edd3ada6479cb1a00131501b0055ada1c"
   },
   "_source": "https://github.com/PredixDev/px-simple-line-chart.git",
   "_target": "^1.4.0",

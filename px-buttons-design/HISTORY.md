@@ -1,3 +1,24 @@
+v0.4.33
+==============================
+* updated to px-sass-doc#0.2.8
+
+v0.4.32
+==============================
+* Updated dependencies
+* Updated boilerplate files
+
+v0.4.31
+==============================
+* added minor fixes to demo
+
+v0.4.30
+==============================
+* fixed typo in demo
+
+v0.4.29
+==============================
+* updated demo
+
 v0.4.28
 ==============================
 * fixed bower.json
